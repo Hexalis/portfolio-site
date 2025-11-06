@@ -1,0 +1,15 @@
+/* Small custom styles (kept separate for cleanliness) */
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .25s ease;
+}
+.link-underline:hover { background-size: 100% 2px; }
+
+/* Optional: card shadow reusable class */
+.shadow-glow {
+  box-shadow: 0 0 0 2px rgba(124,219,255,.15), 0 0 30px rgba(124,219,255,.15);
+}
