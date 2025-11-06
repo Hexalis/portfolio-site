@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Projects Portfolio</title>
+  <meta name="description" content="Projects portfolio: embedded systems, hardware design, GUIs, web apps." />
+  <meta property="og:title" content="Your Name — Projects" />
+  <meta property="og:description" content="Selected projects across embedded, electronics, and software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOURUSERNAME.github.io" />
+  <meta property="og:image" content="/assets/img/og-preview.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Tailwind CDN (no build tools) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"] },
+          colors: {
+            base: {
+              900: "#0b1020",
+              800: "#0f152b",
+              700: "#141b33",
+              100: "#e6ecff"
+            },
+            accent: {
+              500: "#7cdbff",
+              600: "#4cc9f0",
+              700: "#3aa9cf"
+            }
+          },
+          boxShadow: {
+            glow: "0 0 0 2px rgba(124,219,255,.15), 0 0 30px rgba(124,219,255,.15)"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth underline on hover */
+    .link-underline { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .25s ease; }
+    .link-underline:hover { background-size: 100% 2px; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-base-900 to-base-800 text-base-100 antialiased">
+  <!-- Container -->
+  <div class="mx-auto max-w-6xl px-6 pt-10 pb-24">
+    <!-- Nav -->
+    <header class="flex items-center justify-between">
+      <a href="#top" class="text-lg font-semibold tracking-tight">Your Name</a>
+      <nav class="flex items-center gap-4 text-sm">
+        <a class="link-underline" href="#projects">Projects</a>
+        <a class="link-underline" href="#about">About</a>
+        <a class="link-underline" href="#contact">Contact</a>
+        <a class="px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20" href="/resume.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="mt-16 grid items-center gap-8 lg:grid-cols-[1.2fr,1fr]">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">Embedded & Electronics Engineer building <span class="text-accent-500">reliable systems</span> end‑to‑end.</h1>
+        <p class="mt-4 text-base/7 text-white/80 max-w-2xl">ESP32, STM32 (TouchGFX), CAN, OLED/LCD, LED drivers, DMX, MQTT web UIs, and manufacturable PCBs. Here are selected projects with code, photos, and brief write‑ups.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-accent-600 hover:bg-accent-700 shadow-glow focus:outline-none focus:ring-2 focus:ring-accent-600 focus:ring-offset-2 focus:ring-offset-base-800">
+            <span>View Projects</span>
+          </a>
+          <a href="https://github.com/YOURUSERNAME" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/10 hover:bg-white/20">
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/10 hover:bg-white/20">
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-glow">
+        <img src="/assets/img/hero-board.jpg" alt="Project collage" class="w-full rounded-xl object-cover">
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-20">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-semibold">Selected Projects</h2>
+        <a class="text-sm link-underline" href="https://github.com/YOURUSERNAME?tab=repositories">See all on GitHub →</a>
+      </div>
+      <div id="project-grid" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mt-24 grid gap-8 lg:grid-cols-[1fr,1.2fr]">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-xl font-semibold">About</h3>
+        <p class="mt-3 text-white/80">I’m an electrical engineer focusing on embedded systems and hardware. I enjoy turning ideas into robust, testable products — from low‑level drivers and RTOS tasks to PCB layout and production bring‑up.</p>
+        <ul class="mt-4 list-disc pl-6 text-white/80">
+          <li>ESP32/ESP‑IDF, STM32 (HAL/LL), FreeRTOS</li>
+          <li>CAN, I²C, SPI, UART, WS2812/ICLED, DMX</li>
+          <li>TouchGFX, OLED/LCD, backlight drivers</li>
+          <li>KiCad/Altium, DFM/assembly prep & test</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-xl font-semibold">Highlights</h3>
+        <ol class="mt-3 space-y-3 text-white/80">
+          <li>🏁 <strong>Lap Timer</strong> with through‑beam IR and ESP‑Now live telemetry</li>
+          <li>⚖️ <strong>Smart Scale</strong> ESP32‑C3, HX711, OTA updates, WiFiManager</li>
+          <li>🖥️ <strong>TouchGFX Dashboard</strong> on STM32H743 with QSPI assets</li>
+          <li>🌈 <strong>LED/DMX Controller</strong> + web MQTT UI with live preview</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-24">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-xl font-semibold">Contact</h3>
+        <p class="mt-3 text-white/80">Email: <a class="link-underline" href="mailto:you@domain.com">you@domain.com</a></p>
+        <p class="mt-1 text-white/80">I’m open to collaborations, internships, and hardware/embedded gigs.</p>
+      </div>
+    </section>
+
+    <footer class="mt-16 text-sm text-white/60">© <span id="y"></span> Your Name. Built with GitHub Pages + Tailwind.</footer>
+  </div>
+
+  <!-- Minimal project renderer: edit the array below -->
+  <script>
+    const projects = [
+      {
+        title: "Smart Scale (ESP32‑C3 + HX711)",
+        desc: "Battery‑powered scale with OTA, WiFiManager, LED status, and REST API.",
+        img: "/assets/img/smart-scale.jpg",
+        tags: ["ESP32‑C3", "HX711", "OTA", "FastLED"],
+        links: { code: "https://github.com/YOURUSERNAME/smart-scale", demo: "#" }
+      },
+      {
+        title: "Lap Timer (ESP‑Now Telemetry)",
+        desc: "Through‑beam IR timing, OLED display, logging to SD, live link to pit laptop.",
+        img: "/assets/img/lap-timer.jpg",
+        tags: ["ESP‑Now", "OLED", "SD"],
+        links: { code: "https://github.com/YOURUSERNAME/lap-timer", demo: "#" }
+      },
+      {
+        title: "TouchGFX Dashboard (STM32H7)",
+        desc: "Telemetry screen with QSPI assets, CAN integration, and custom fonts.",
+        img: "/assets/img/touchgfx.jpg",
+        tags: ["STM32H7", "TouchGFX", "QSPI", "CAN"],
+        links: { code: "https://github.com/YOURUSERNAME/dash-touchgfx", demo: "#" }
+      },
+      {
+        title: "LED/DMX Controller + MQTT UI",
+        desc: "Web control over DMX and addressable LEDs with live browser preview.",
+        img: "/assets/img/dmx-ui.jpg",
+        tags: ["DMX", "MQTT", "Tailwind"],
+        links: { code: "https://github.com/YOURUSERNAME/dmx-mqtt-ui", demo: "#" }
+      }
+    ];
+
+    const grid = document.getElementById('project-grid');
+    const chip = (t) => `<span class='rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-xs text-white/80'>${t}</span>`;
+
+    projects.forEach((p, i) => {
+      const card = document.createElement('article');
+      card.className = "group rounded-2xl border border-white/10 bg-white/5 overflow-hidden focus-within:ring-2 focus-within:ring-accent-600";
+      card.innerHTML = `
+        <a href='${p.links.demo || p.links.code || "#"}' class='block outline-none' aria-label='Open ${p.title}'>
+          <img src='${p.img}' alt='${p.title}' class='h-44 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]' />
+        </a>
+        <div class='p-4'>
+          <h3 class='text-lg font-semibold'>${p.title}</h3>
+          <p class='mt-1 text-sm text-white/80'>${p.desc}</p>
+          <div class='mt-3 flex flex-wrap gap-2'>${p.tags.map(chip).join('')}</div>
+          <div class='mt-4 flex gap-3 text-sm'>
+            ${p.links.code ? `<a class='link-underline' href='${p.links.code}'>Code →</a>` : ''}
+            ${p.links.demo ? `<a class='link-underline' href='${p.links.demo}'>Demo →</a>` : ''}
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    // Year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
